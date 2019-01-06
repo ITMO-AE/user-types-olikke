@@ -9,7 +9,7 @@ struct FullName
 {
     std::string FirstName;
     std::string LastName;
-    explicit FullName(std::string firstName, std::string lastName): FirstName(firstName), LastName(lastName) {}
+    FullName(std::string firstName, std::string lastName): FirstName(firstName), LastName(lastName) {}
 };
 
 class Person
@@ -19,7 +19,7 @@ class Person
  //   std::map <int, std::pair<std::string,std::string>> Map;
     int BirthYear;
 public:
-    explicit Person(std::string FirstName, std::string LastName, int BirthYear);
+    Person(std::string FirstName, std::string LastName, int BirthYear);
     void ChangeFirstName(int Year, std::string FirstName);
     void ChangeLastName(int Year, std::string LastName);
     std::string GetFullName(int Year) const;
